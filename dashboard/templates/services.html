@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'common/common_header_import.html' %}
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <!-- <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header> -->
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+
+      {% include 'common/sidebar.html' %}
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">ADMIN PANEL</p>
+        </div>
+
+        <!-- <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PRODUCTS</p>
+              <span class="material-icons-outlined text-blue">inventory_2</span>
+            </div>
+            <span class="text-primary font-weight-bold">249</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PURCHASE ORDERS</p>
+              <span class="material-icons-outlined text-orange"
+                >add_shopping_cart</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">83</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">SALES ORDERS</p>
+              <span class="material-icons-outlined text-green"
+                >shopping_cart</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">79</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">INVENTORY ALERTS</p>
+              <span class="material-icons-outlined text-red"
+                >notification_important</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">56</span>
+          </div>
+        </div> -->
+
+        <div class="charts">
+          <!-- <div class="charts-card">
+            <p class="chart-title">Top 5 Products</p>
+            <div id="bar-chart"></div>
+          </div> -->
+
+          <!-- <div class="charts-card">
+            <p class="chart-title">Purchase and Sales Orders</p>
+            <div id="area-chart"></div>
+          </div> -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">File</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Background1</th>
+                <td><img src="2528871.jpg" style="width: 130px" /></td>
+                <td>This is the first image of description</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    Update
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                            Update
+                          </h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label"
+                                >Image</label
+                              >
+                              <input
+                                type="file"
+                                class="form-control"
+                                id="image"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label"
+                                >Title:</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="title"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label"
+                                >Description:</label
+                              >
+                              <textarea
+                                class="form-control"
+                                id="message-text"
+                              ></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Update
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Delete pop up -->
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-toggle="modal"
+                    data-target="#staticBackdrop"
+                  >
+                    Delete
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-backdrop="static"
+                    data-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">
+                            Delete
+                          </h5>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                          >
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to delete?
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!-- End Main -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+  </body>
+</html>
